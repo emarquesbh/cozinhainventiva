@@ -1,0 +1,306 @@
+/**
+ * Cook Mode CSS
+ *
+ * @package Cozinha_Inventiva
+ * @since 1.0.0
+ * 
+ * Arquivo: /assets/css/cook-mode.css
+ * Localização: assets/css/cook-mode.css
+ * Linhas: 240
+ * 
+ * FUNÇÃO: CSS específico para o modo cozinheiro (cook mode):
+ * - Layout fullscreen
+ * - Header/Footer fixos
+ * - Navegação step-by-step
+ * - Timer visual
+ * - Sidebar de ingredientes
+ * - Botões grandes para uso durante cozimento
+ * - Fonte aumentada para leitura à distância
+ * - Responsividade mobile
+ */
+
+/* ARQUIVO 38/42 - COOK-MODE.CSS */
+
+/* ==========================================================================
+   Layout Fullscreen
+   ========================================================================== */
+
+.cook-mode-body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    font-family: -apple-system, BlinkMacSystemFont, 'Inter', sans-serif;
+}
+
+.cook-mode-container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background-color: #ffffff;
+}
+
+/* ==========================================================================
+   Header
+   ========================================================================== */
+
+.cook-mode-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #48bb78;
+    color: #ffffff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    z-index: 100;
+}
+
+.header-left,
+.header-right {
+    flex: 0 0 auto;
+    min-width: 100px;
+}
+
+.header-center {
+    flex: 1;
+    text-align: center;
+}
+
+.close-cook-mode {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #ffffff;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.close-cook-mode:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+    color: #ffffff;
+}
+
+.recipe-title {
+    font-size: 1.5rem;
+    margin: 0;
+    color: #ffffff;
+}
+
+/* ==========================================================================
+   Main Content Area
+   ========================================================================== */
+
+.cook-mode-main {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3rem 2rem;
+    overflow-y: auto;
+}
+
+.step-container {
+    width: 100%;
+    max-width: 900px;
+}
+
+.step-number {
+    font-size: 1.25rem;
+    color: #718096;
+    text-align: center;
+    margin-bottom: 2rem;
+    font-weight: 600;
+}
+
+.step-content {
+    font-size: 2rem;
+    line-height: 1.6;
+    color: #1a202c;
+    text-align: center;
+}
+
+/* ==========================================================================
+   Timer
+   ========================================================================== */
+
+.step-timer {
+    margin-top: 3rem;
+    text-align: center;
+}
+
+.timer-display {
+    font-size: 4rem;
+    font-weight: 700;
+    color: #48bb78;
+    margin-bottom: 1.5rem;
+    font-variant-numeric: tabular-nums;
+}
+
+.timer-controls {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* ==========================================================================
+   Sidebar de Ingredientes
+   ========================================================================== */
+
+.ingredients-sidebar {
+    position: fixed;
+    top: 0;
+    right: -400px;
+    width: 400px;
+    height: 100vh;
+    background-color: #ffffff;
+    box-shadow: -4px 0 16px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    overflow-y: auto;
+    transition: right 0.3s ease;
+    z-index: 200;
+}
+
+.ingredients-sidebar.open {
+    right: 0;
+}
+
+.ingredients-sidebar h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    color: #1a202c;
+}
+
+.ingredients-list {
+    font-size: 1.125rem;
+    line-height: 1.8;
+}
+
+/* ==========================================================================
+   Footer Navigation
+   ========================================================================== */
+
+.cook-mode-footer {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    padding: 1.5rem 2rem;
+    background-color: #f7fafc;
+    box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.05);
+    z-index: 100;
+}
+
+.nav-btn {
+    padding: 1rem 2rem;
+    font-size: 1.125rem;
+    font-weight: 600;
+    background-color: #48bb78;
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: all 0.3s ease;
+}
+
+.nav-btn:hover:not(:disabled) {
+    background-color: #38a169;
+    transform: translateY(-2px);
+}
+
+.nav-btn:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+}
+
+.nav-btn-prev {
+    order: 1;
+}
+
+.nav-btn-next {
+    order: 3;
+}
+
+.progress-indicator {
+    flex: 1;
+    order: 2;
+    height: 8px;
+    background-color: #e2e8f0;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.progress-bar {
+    height: 100%;
+    background-color: #48bb78;
+    border-radius: 4px;
+    transition: width 0.3s ease;
+    width: 0%;
+}
+
+/* ==========================================================================
+   Responsividade
+   ========================================================================== */
+
+@media (max-width: 768px) {
+    .cook-mode-header {
+        padding: 1rem;
+    }
+
+    .recipe-title {
+        font-size: 1.125rem;
+    }
+
+    .cook-mode-main {
+        padding: 2rem 1rem;
+    }
+
+    .step-content {
+        font-size: 1.5rem;
+    }
+
+    .timer-display {
+        font-size: 3rem;
+    }
+
+    .ingredients-sidebar {
+        width: 100%;
+        right: -100%;
+    }
+
+    .cook-mode-footer {
+        padding: 1rem;
+        gap: 1rem;
+    }
+
+    .nav-btn {
+        padding: 0.75rem 1rem;
+        font-size: 1rem;
+    }
+
+    .nav-btn span {
+        display: none;
+    }
+}
+
+/* ==========================================================================
+   Print Styles
+   ========================================================================== */
+
+@media print {
+    .cook-mode-header,
+    .cook-mode-footer,
+    .ingredients-sidebar {
+        display: none !important;
+    }
+
+    .cook-mode-main {
+        padding: 0;
+    }
+}
+
+/* Fim do arquivo cook-mode.css - Linha 240 */

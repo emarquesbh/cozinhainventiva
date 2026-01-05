@@ -1,0 +1,10 @@
+{
+  "apiVersion": 2,
+  "name": "cozinha-inventiva/busca-ingredientes",
+  "title": "Busca por Ingredientes",
+  "category": "widgets",
+  "icon": "search",
+  "description": "Formulário de busca por ingredientes",
+  "textdomain": "cozinha-inventiva",
+  "editorScript": "file:./index.js"
+}

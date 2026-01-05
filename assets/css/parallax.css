@@ -1,0 +1,113 @@
+/**
+ * Parallax CSS
+ *
+ * @package Cozinha_Inventiva
+ * @since 1.0.0
+ * 
+ * Arquivo: /assets/css/parallax.css
+ * Localização: assets/css/parallax.css
+ * Linhas: 95
+ * 
+ * FUNÇÃO: Estilos específicos para o efeito parallax no hero section:
+ * - .parallax-bg - Configuração da camada de fundo com transform
+ * - will-change: transform - Otimização de performance
+ * - position: absolute com overflow controlado
+ * - Transições suaves
+ * - Ajustes de altura para efeito de profundidade
+ * - Fallbacks para dispositivos móveis
+ * 
+ * COMO FUNCIONA:
+ * Este CSS prepara a imagem de fundo para receber transformações do JavaScript
+ * (parallax.js) que aplica translateY() baseado no scroll da página.
+ */
+
+/* ARQUIVO 31/42 - PARALLAX.CSS */
+
+/* ==========================================================================
+   Parallax Background - EFEITO PRINCIPAL
+   ========================================================================== */
+
+.parallax-bg {
+    /* Posicionamento absoluto para permitir movimento */
+    position: absolute;
+    top: -50px;
+    left: 0;
+    width: 100%;
+    
+    /* Altura extra para compensar movimento */
+    height: calc(100% + 100px);
+    
+    /* Background settings */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+    /* Performance optimization */
+    will-change: transform;
+    transform: translateZ(0);
+    backface-visibility: hidden;
+    
+    /* Z-index para ficar atrás do conteúdo */
+    z-index: 0;
+    
+    /* Transição suave para movimento */
+    transition: transform 0.1s linear;
+}
+
+/* ==========================================================================
+   Container do Parallax
+   ========================================================================== */
+
+.parallax-container {
+    position: relative;
+    overflow: hidden;
+    min-height: 600px;
+}
+
+/* ==========================================================================
+   Overlay sobre o Parallax
+   ========================================================================== */
+
+.parallax-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+/* ==========================================================================
+   Conteúdo sobre o Parallax
+   ========================================================================== */
+
+.parallax-content {
+    position: relative;
+    z-index: 2;
+}
+
+/* ==========================================================================
+   Otimizações de Performance
+   ========================================================================== */
+
+/* Reduzir qualidade em dispositivos móveis para performance */
+@media (max-width: 768px) {
+    .parallax-bg {
+        /* Desabilitar parallax em mobile para melhor performance */
+        position: absolute;
+        top: 0;
+        height: 100%;
+        transform: none !important;
+        will-change: auto;
+    }
+}
+
+/* Preferência de movimento reduzido (acessibilidade) */
+@media (prefers-reduced-motion: reduce) {
+    .parallax-bg {
+        transform: none !important;
+        transition: none !important;
+    }
+}
+
+/* Fim do arquivo parallax.css - Linha 95 */

@@ -1,0 +1,11 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 2,
+  "name": "cozinha-inventiva/impacto",
+  "title": "Impacto do Upcycling",
+  "category": "widgets",
+  "icon": "chart-pie",
+  "description": "Mostra impacto ambiental",
+  "textdomain": "cozinha-inventiva",
+  "editorScript": "file:./index.js"
+}
