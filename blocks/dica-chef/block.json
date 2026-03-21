@@ -1,0 +1,13 @@
+{
+  "apiVersion": 2,
+  "name": "cozinha-inventiva/dica-chef",
+  "title": "Dica do Chef",
+  "category": "text",
+  "icon": "lightbulb",
+  "description": "Destaque uma dica importante",
+  "textdomain": "cozinha-inventiva",
+  "editorScript": "file:./index.js",
+  "attributes": {
+    "content": {"type": "string", "default": "👨‍🍳 Dica do Chef: "}
+  }
+}

@@ -1,0 +1,208 @@
+/**
+ * Admin CSS
+ *
+ * @package Cozinha_Inventiva
+ * @since 1.0.0
+ * 
+ * Arquivo: /assets/css/admin.css
+ * Localização: assets/css/admin.css
+ * Linhas: 145
+ * 
+ * FUNÇÃO: CSS para área administrativa do WordPress:
+ * - Estilos para editor Gutenberg
+ * - Customizações do admin do tema
+ * - Preview de componentes no editor
+ * - Melhorias visuais no painel
+ * - Estilos para ACF fields customizados
+ * - Helpers de admin
+ */
+
+/* ARQUIVO 36/42 - ADMIN.CSS */
+
+/* ==========================================================================
+   Estilos Gerais do Admin
+   ========================================================================== */
+
+.cozinha-inventiva-admin-notice {
+    border-left-color: #48bb78 !important;
+}
+
+.cozinha-inventiva-admin-notice .notice-title {
+    font-weight: 600;
+    color: #1a202c;
+}
+
+/* ==========================================================================
+   Editor Gutenberg
+   ========================================================================== */
+
+.editor-styles-wrapper {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+.editor-styles-wrapper h1,
+.editor-styles-wrapper h2,
+.editor-styles-wrapper h3,
+.editor-styles-wrapper h4,
+.editor-styles-wrapper h5,
+.editor-styles-wrapper h6 {
+    font-family: 'Poppins', -apple-system, BlinkMacSystemFont, sans-serif;
+    color: #1a202c;
+}
+
+.editor-styles-wrapper a {
+    color: #48bb78;
+}
+
+.editor-styles-wrapper a:hover {
+    color: #38a169;
+}
+
+/* ==========================================================================
+   ACF Fields Customizados
+   ========================================================================== */
+
+.acf-field[data-name="dicas_aproveitamento"] .acf-label label,
+.acf-field[data-name="beneficios"] .acf-label label {
+    color: #48bb78;
+    font-weight: 600;
+}
+
+.acf-field .acf-label {
+    font-weight: 600;
+}
+
+/* ==========================================================================
+   Post Type Icons
+   ========================================================================== */
+
+#adminmenu .menu-icon-ci_tecnica img,
+#adminmenu .menu-icon-ci_guia img {
+    width: 20px;
+    height: 20px;
+    opacity: 0.6;
+}
+
+#adminmenu .menu-icon-ci_tecnica:hover img,
+#adminmenu .menu-icon-ci_guia:hover img {
+    opacity: 1;
+}
+
+/* ==========================================================================
+   Meta Boxes
+   ========================================================================== */
+
+.postbox .inside {
+    padding: 1rem;
+}
+
+.postbox-header h2 {
+    color: #1a202c;
+}
+
+/* ==========================================================================
+   Tabelas do Admin
+   ========================================================================== */
+
+.widefat thead tr th,
+.widefat tfoot tr th {
+    background-color: #f7fafc;
+}
+
+.widefat tbody tr:hover {
+    background-color: #f0fff4;
+}
+
+/* ==========================================================================
+   Campos de Formulário
+   ========================================================================== */
+
+.cozinha-inventiva-form-field {
+    margin-bottom: 1.5rem;
+}
+
+.cozinha-inventiva-form-field label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: #2d3748;
+}
+
+.cozinha-inventiva-form-field input[type="text"],
+.cozinha-inventiva-form-field input[type="email"],
+.cozinha-inventiva-form-field input[type="url"],
+.cozinha-inventiva-form-field textarea,
+.cozinha-inventiva-form-field select {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #e2e8f0;
+    border-radius: 4px;
+}
+
+.cozinha-inventiva-form-field .description {
+    display: block;
+    margin-top: 0.5rem;
+    font-size: 0.875rem;
+    color: #718096;
+    font-style: italic;
+}
+
+/* ==========================================================================
+   Botões Customizados
+   ========================================================================== */
+
+.button-cozinha-primary {
+    background-color: #48bb78 !important;
+    border-color: #38a169 !important;
+    color: #ffffff !important;
+    text-shadow: none !important;
+    box-shadow: none !important;
+}
+
+.button-cozinha-primary:hover {
+    background-color: #38a169 !important;
+    border-color: #2f855a !important;
+}
+
+/* ==========================================================================
+   Dashboard Widgets
+   ========================================================================== */
+
+.cozinha-inventiva-dashboard-widget {
+    padding: 1rem;
+}
+
+.cozinha-inventiva-dashboard-widget h3 {
+    margin-top: 0;
+    color: #1a202c;
+}
+
+.cozinha-inventiva-stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.cozinha-stat-item {
+    text-align: center;
+    padding: 1rem;
+    background-color: #f7fafc;
+    border-radius: 8px;
+}
+
+.cozinha-stat-number {
+    display: block;
+    font-size: 2rem;
+    font-weight: 700;
+    color: #48bb78;
+}
+
+.cozinha-stat-label {
+    display: block;
+    font-size: 0.875rem;
+    color: #718096;
+    margin-top: 0.5rem;
+}
+
+/* Fim do arquivo admin.css - Linha 145 */

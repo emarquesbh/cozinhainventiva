@@ -1,0 +1,11 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 2,
+  "name": "cozinha-inventiva/antes-depois",
+  "title": "Antes e Depois",
+  "category": "media",
+  "icon": "image-flip-horizontal",
+  "description": "Comparação visual",
+  "textdomain": "cozinha-inventiva",
+  "editorScript": "file:./index.js"
+}

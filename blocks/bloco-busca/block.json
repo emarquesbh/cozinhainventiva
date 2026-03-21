@@ -1,0 +1,11 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 2,
+  "name": "cozinha-inventiva/busca",
+  "title": "Busca Ingredientes",
+  "category": "widgets",
+  "icon": "search",
+  "description": "Widget de busca",
+  "textdomain": "cozinha-inventiva",
+  "editorScript": "file:./index.js"
+}

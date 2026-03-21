@@ -1,0 +1,14 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 2,
+  "name": "cozinha-inventiva/dica",
+  "title": "Dica do Chef",
+  "category": "text",
+  "icon": "lightbulb",
+  "description": "Destaque dicas",
+  "textdomain": "cozinha-inventiva",
+  "editorScript": "file:./index.js",
+  "attributes": {
+    "content": {"type": "string", "default": "👨‍🍳 Dica: "}
+  }
+}

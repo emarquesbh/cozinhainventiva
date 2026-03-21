@@ -1,0 +1,10 @@
+{
+  "apiVersion": 2,
+  "name": "cozinha-inventiva/antes-depois",
+  "title": "Antes e Depois",
+  "category": "media",
+  "icon": "image-flip-horizontal",
+  "description": "Comparação visual antes/depois",
+  "textdomain": "cozinha-inventiva",
+  "editorScript": "file:./index.js"
+}
