@@ -1,0 +1,22 @@
+# Arquivos do sistema
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Uploads
+wp-content/uploads/
+
+# Cache
+wp-content/cache/
+
+# Configuração sensível
+wp-config.php
+
+# Dependências
+node_modules/
+vendor/
+
+# Ambiente
+.env
