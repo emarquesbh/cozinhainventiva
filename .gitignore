@@ -1,22 +1,14 @@
-# Arquivos do sistema
-.DS_Store
-Thumbs.db
+# Estratégia: ignora TUDO por padrão e libera (!) só o código próprio.
+# Isso evita que WordPress core, plugins/temas de terceiros, credenciais,
+# uploads e backups acabem indo pro repositório por engano.
 
-# Logs
-*.log
+*
+!.gitignore
 
-# Uploads
-wp-content/uploads/
-
-# Cache
-wp-content/cache/
-
-# Configuração sensível
-wp-config.php
-
-# Dependências
-node_modules/
-vendor/
-
-# Ambiente
-.env
+# Código próprio: tema customizado
+!/wp-content/
+/wp-content/*
+!/wp-content/themes/
+/wp-content/themes/*
+!/wp-content/themes/cozinha-inventiva/
+!/wp-content/themes/cozinha-inventiva/**
